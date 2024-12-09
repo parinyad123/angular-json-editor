@@ -1,0 +1,14 @@
+
+<div>
+<label for="clipboard-example-textarea">Text to be copied</label>
+<textarea class="resize rounded-md" id="clipboard-example-textarea" cols="5" rows="10" [(ngModel)]="value"></textarea>
+<button [cdkCopyToClipboard]="value">Copy to clipboard</button>
+
+<div>
+    <button (click)="validateJson()">Validate JSON</button>
+  </div>
+  <div *ngIf="validationResult">
+    <h3>Validation Result:</h3>
+    <pre>{{ validationResult }}</pre>
+
+</div>
